@@ -1,0 +1,4 @@
+project-files/
+*.gns3.backup
+*.bin
+*.image
