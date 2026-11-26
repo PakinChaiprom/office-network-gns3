@@ -1,0 +1,147 @@
+HQ-DSW1#show spanning-tree
+
+ VLAN1 is executing the ieee compatible Spanning Tree protocol
+  Bridge Identifier has priority 4096, address c402.069a.0000
+  Configured hello time 2, max age 20, forward delay 15
+  We are the root of the spanning tree
+  Topology change flag not set, detected flag not set
+  Number of topology changes 1 last change occurred 02:20:15 ago
+          from FastEthernet1/0
+  Times:  hold 1, topology change 35, notification 2
+          hello 2, max age 20, forward delay 15
+  Timers: hello 0, topology change 0, notification 0, aging 300
+
+ Port 41 (FastEthernet1/0) of VLAN1 is forwarding
+   Port path cost 19, Port priority 128, Port Identifier 128.41.
+   Designated root has priority 4096, address c402.069a.0000
+   Designated bridge has priority 4096, address c402.069a.0000
+   Designated port id is 128.41, designated path cost 0
+   Timers: message age 0, forward delay 0, hold 0
+   Number of transitions to forwarding state: 1
+   BPDU: sent 8434, received 0
+
+
+ VLAN10 is executing the ieee compatible Spanning Tree protocol
+  Bridge Identifier has priority 4096, address c402.069a.0001
+  Configured hello time 2, max age 20, forward delay 15
+  We are the root of the spanning tree
+  Topology change flag not set, detected flag not set
+  Number of topology changes 1 last change occurred 02:20:15 ago
+          from FastEthernet1/0
+  Times:  hold 1, topology change 35, notification 2
+          hello 2, max age 20, forward delay 15
+  Timers: hello 0, topology change 0, notification 0, aging 300
+
+ Port 41 (FastEthernet1/0) of VLAN10 is forwarding
+   Port path cost 19, Port priority 128, Port Identifier 128.41.
+   Designated root has priority 4096, address c402.069a.0001
+   Designated bridge has priority 4096, address c402.069a.0001
+   Designated port id is 128.41, designated path cost 0
+   Timers: message age 0, forward delay 0, hold 0
+   Number of transitions to forwarding state: 1
+   BPDU: sent 4221, received 2
+
+
+ VLAN20 is executing the ieee compatible Spanning Tree protocol
+  Bridge Identifier has priority 4096, address c402.069a.0002
+  Configured hello time 2, max age 20, forward delay 15
+  We are the root of the spanning tree
+  Topology change flag not set, detected flag not set
+  Number of topology changes 1 last change occurred 02:20:19 ago
+          from FastEthernet1/0
+  Times:  hold 1, topology change 35, notification 2
+          hello 2, max age 20, forward delay 15
+  Timers: hello 0, topology change 0, notification 0, aging 300
+
+ Port 41 (FastEthernet1/0) of VLAN20 is forwarding
+   Port path cost 19, Port priority 128, Port Identifier 128.41.
+   Designated root has priority 4096, address c402.069a.0002
+   Designated bridge has priority 4096, address c402.069a.0002
+   Designated port id is 128.41, designated path cost 0
+   Timers: message age 0, forward delay 0, hold 0
+   Number of transitions to forwarding state: 1
+   BPDU: sent 4222, received 2
+
+
+ VLAN30 is executing the ieee compatible Spanning Tree protocol
+  Bridge Identifier has priority 4096, address c402.069a.0003
+  Configured hello time 2, max age 20, forward delay 15
+  We are the root of the spanning tree
+  Topology change flag not set, detected flag not set
+  Number of topology changes 1 last change occurred 02:20:21 ago
+          from FastEthernet1/0
+  Times:  hold 1, topology change 35, notification 2
+          hello 2, max age 20, forward delay 15
+  Timers: hello 0, topology change 0, notification 0, aging 300
+
+ Port 41 (FastEthernet1/0) of VLAN30 is forwarding
+   Port path cost 19, Port priority 128, Port Identifier 128.41.
+   Designated root has priority 4096, address c402.069a.0003
+   Designated bridge has priority 4096, address c402.069a.0003
+   Designated port id is 128.41, designated path cost 0
+   Timers: message age 0, forward delay 0, hold 0
+   Number of transitions to forwarding state: 1
+   BPDU: sent 4223, received 2
+
+
+ VLAN40 is executing the ieee compatible Spanning Tree protocol
+  Bridge Identifier has priority 4096, address c402.069a.0004
+  Configured hello time 2, max age 20, forward delay 15
+  We are the root of the spanning tree
+  Topology change flag not set, detected flag not set
+  Number of topology changes 1 last change occurred 02:20:23 ago
+          from FastEthernet1/0
+  Times:  hold 1, topology change 35, notification 2
+          hello 2, max age 20, forward delay 15
+  Timers: hello 0, topology change 0, notification 0, aging 300
+
+ Port 41 (FastEthernet1/0) of VLAN40 is forwarding
+   Port path cost 19, Port priority 128, Port Identifier 128.41.
+   Designated root has priority 4096, address c402.069a.0004
+   Designated bridge has priority 4096, address c402.069a.0004
+   Designated port id is 128.41, designated path cost 0
+   Timers: message age 0, forward delay 0, hold 0
+   Number of transitions to forwarding state: 1
+   BPDU: sent 4223, received 1
+
+
+ VLAN50 is executing the ieee compatible Spanning Tree protocol
+  Bridge Identifier has priority 4096, address c402.069a.0005
+  Configured hello time 2, max age 20, forward delay 15
+  We are the root of the spanning tree
+  Topology change flag not set, detected flag not set
+  Number of topology changes 1 last change occurred 02:20:25 ago
+          from FastEthernet1/0
+  Times:  hold 1, topology change 35, notification 2
+          hello 2, max age 20, forward delay 15
+  Timers: hello 0, topology change 0, notification 0, aging 300
+
+ Port 41 (FastEthernet1/0) of VLAN50 is forwarding
+   Port path cost 19, Port priority 128, Port Identifier 128.41.
+   Designated root has priority 4096, address c402.069a.0005
+   Designated bridge has priority 4096, address c402.069a.0005
+   Designated port id is 128.41, designated path cost 0
+   Timers: message age 0, forward delay 0, hold 0
+   Number of transitions to forwarding state: 1
+   BPDU: sent 4224, received 2
+
+
+ VLAN999 is executing the ieee compatible Spanning Tree protocol
+  Bridge Identifier has priority 4096, address c402.069a.0006
+  Configured hello time 2, max age 20, forward delay 15
+  We are the root of the spanning tree
+  Topology change flag not set, detected flag not set
+  Number of topology changes 1 last change occurred 02:20:26 ago
+          from FastEthernet1/0
+  Times:  hold 1, topology change 35, notification 2
+          hello 2, max age 20, forward delay 15
+  Timers: hello 0, topology change 0, notification 0, aging 300
+
+ Port 41 (FastEthernet1/0) of VLAN999 is forwarding
+   Port path cost 19, Port priority 128, Port Identifier 128.41.
+   Designated root has priority 4096, address c402.069a.0006
+   Designated bridge has priority 4096, address c402.069a.0006
+   Designated port id is 128.41, designated path cost 0
+   Timers: message age 0, forward delay 0, hold 0
+   Number of transitions to forwarding state: 1
+   BPDU: sent 4224, received 1

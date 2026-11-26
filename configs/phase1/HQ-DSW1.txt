@@ -1,0 +1,202 @@
+HQ-DSW1#show running-config
+Building configuration...
+
+Current configuration : 2966 bytes
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname HQ-DSW1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+memory-size iomem 5
+no ip icmp rate-limit unreachable
+ip cef
+!
+!
+!
+!
+no ip domain lookup
+ip auth-proxy max-nodata-conns 3
+ip admission max-nodata-conns 3
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree vlan 1 priority 4096
+spanning-tree vlan 10 priority 4096
+spanning-tree vlan 20 priority 4096
+spanning-tree vlan 30 priority 4096
+spanning-tree vlan 40 priority 4096
+spanning-tree vlan 50 priority 4096
+spanning-tree vlan 999 priority 4096
+vtp file nvram:vlan.dat
+
+!
+!
+ip tcp synwait-time 5
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ description TO-HQ-R-Fa0/0
+ ip address 10.10.255.2 255.255.255.252
+ speed 100
+ full-duplex
+!
+interface FastEthernet0/1
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+!
+interface FastEthernet1/0
+ description TO-HQ-ASW1-Fa1/0
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 1,10,20,30,40,50,999,1002-1005
+ switchport mode trunk
+!
+interface FastEthernet1/1
+ switchport access vlan 998
+ shutdown
+!
+interface FastEthernet1/2
+ switchport access vlan 998
+ shutdown
+!
+interface FastEthernet1/3
+ switchport access vlan 998
+ shutdown
+!
+interface FastEthernet1/4
+ switchport access vlan 998
+ shutdown
+!
+interface FastEthernet1/5
+ switchport access vlan 998
+ shutdown
+!
+interface FastEthernet1/6
+ switchport access vlan 998
+ shutdown
+!
+interface FastEthernet1/7
+ switchport access vlan 998
+ shutdown
+!
+interface FastEthernet1/8
+ switchport access vlan 998
+ shutdown
+!
+interface FastEthernet1/9
+ switchport access vlan 998
+ shutdown
+!
+interface FastEthernet1/10
+ switchport access vlan 998
+ shutdown
+!
+interface FastEthernet1/11
+ switchport access vlan 998
+ shutdown
+!
+interface FastEthernet1/12
+ switchport access vlan 998
+ shutdown
+!
+interface FastEthernet1/13
+ switchport access vlan 998
+ shutdown
+!
+interface FastEthernet1/14
+ switchport access vlan 998
+ shutdown
+!
+interface FastEthernet1/15
+ switchport access vlan 998
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan10
+ description MGMT
+ ip address 10.10.1.33 255.255.255.224
+ ip helper-address 10.10.255.128
+!
+interface Vlan20
+ description FIN
+ ip address 10.10.0.193 255.255.255.192
+ ip helper-address 10.10.255.128
+!
+interface Vlan30
+ description OPS
+ ip address 10.10.0.1 255.255.255.128
+ ip helper-address 10.10.255.128
+!
+interface Vlan40
+ description SRV
+ ip address 10.10.1.1 255.255.255.224
+!
+interface Vlan50
+ description GUEST
+ ip address 10.10.0.129 255.255.255.192
+ ip helper-address 10.10.255.128
+!
+ip forward-protocol nd
+ip route 0.0.0.0 0.0.0.0 10.10.255.1
+!
+!
+no ip http server
+no ip http secure-server
+!
+no cdp log mismatch duplex
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line vty 0 4
+ login
+!
+!
+end
+

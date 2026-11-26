@@ -1,0 +1,9 @@
+HQ-R#show ip dhcp binding
+Bindings from all pools not associated with VRF:
+IP address      Client-ID/              Lease expiration        Type       State      Interface
+                Hardware address/
+                User name
+10.10.0.5       0100.5079.6668.01       Nov 27 2026 10:09 AM    Automatic  Active     Unknown
+10.10.0.139     0100.5079.6668.02       Nov 26 2026 02:10 PM    Automatic  Active     Unknown
+10.10.0.204     0100.5079.6668.00       Nov 27 2026 10:36 AM    Automatic  Active     Unknown
+10.10.1.43      0100.5079.6668.03       Nov 27 2026 10:12 AM    Automatic  Active     Unknown

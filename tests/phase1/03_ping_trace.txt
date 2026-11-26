@@ -1,0 +1,25 @@
+FIN> ping 10.10.0.5
+
+84 bytes from 10.10.0.5 icmp_seq=1 ttl=63 time=30.105 ms
+84 bytes from 10.10.0.5 icmp_seq=2 ttl=63 time=84.749 ms
+84 bytes from 10.10.0.5 icmp_seq=3 ttl=63 time=20.632 ms
+84 bytes from 10.10.0.5 icmp_seq=4 ttl=63 time=20.949 ms
+84 bytes from 10.10.0.5 icmp_seq=5 ttl=63 time=12.259 ms
+
+OPS> ping 10.10.0.139
+
+84 bytes from 10.10.0.139 icmp_seq=1 ttl=63 time=30.923 ms
+84 bytes from 10.10.0.139 icmp_seq=2 ttl=63 time=11.663 ms
+84 bytes from 10.10.0.139 icmp_seq=3 ttl=63 time=12.396 ms
+84 bytes from 10.10.0.139 icmp_seq=4 ttl=63 time=19.566 ms
+84 bytes from 10.10.0.139 icmp_seq=5 ttl=63 time=11.402 ms
+
+FIN> trace 10.10.0.5
+trace to 10.10.0.5, 8 hops max, press Ctrl+C to stop
+ 1   10.10.0.193   9.806 ms  9.711 ms  9.804 ms
+ 2   *10.10.0.5   30.490 ms (ICMP type:3, code:3, Destination port unreachable)
+
+OPS> trace 10.10.0.139
+trace to 10.10.0.139, 8 hops max, press Ctrl+C to stop
+ 1   10.10.0.1   4.068 ms  9.334 ms  9.230 ms
+ 2   *10.10.0.139   30.453 ms (ICMP type:3, code:3, Destination port unreachable)

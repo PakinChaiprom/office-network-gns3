@@ -1,1 +1,22 @@
-! VLAN setup for DSW1/DSW2/ASW1 - fill in during Phase 1
+! VLAN setup for HQ-DSW1, HQ-DSW2 and HQ-ASW1 (NM-16ESW)
+! Run once per switch. See docs/platform-limitations.md for keeping VLANs across restarts.
+
+! 1. Global config: store vlan.dat in NVRAM so it survives a project close
+configure terminal
+ vtp file nvram:vlan.dat
+end
+
+! 2. Privileged mode: create the VLANs ("exit" applies them, "end" is not valid here)
+vlan database
+ vlan 10 name MGMT
+ vlan 20 name FIN
+ vlan 30 name OPS
+ vlan 40 name SRV
+ vlan 50 name GUEST
+ vlan 998 name PARKING
+ vlan 999 name NATIVE
+exit
+
+! 3. Check
+show vlan-switch brief
+write memory

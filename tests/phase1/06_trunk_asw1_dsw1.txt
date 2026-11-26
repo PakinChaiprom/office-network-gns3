@@ -1,0 +1,27 @@
+HQ-ASW1#show interfaces trunk
+
+Port      Mode         Encapsulation  Status        Native vlan
+Fa1/0     on           802.1q         trunking      999
+
+Port      Vlans allowed on trunk
+Fa1/0     1,10,20,30,40,50,999,1002-1005
+
+Port      Vlans allowed and active in management domain
+Fa1/0     1,10,20,30,40,50,999
+
+Port      Vlans in spanning tree forwarding state and not pruned
+Fa1/0     1,10,20,30,40,50,999
+
+HQ-DSW1#show interfaces trunk
+
+Port      Mode         Encapsulation  Status        Native vlan
+Fa1/0     on           802.1q         trunking      999
+
+Port      Vlans allowed on trunk
+Fa1/0     1,10,20,30,40,50,999,1002-1005
+
+Port      Vlans allowed and active in management domain
+Fa1/0     1,10,20,30,40,50,999
+
+Port      Vlans in spanning tree forwarding state and not pruned
+Fa1/0     1,10,20,30,40,50,999

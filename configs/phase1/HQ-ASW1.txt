@@ -1,0 +1,193 @@
+HQ-ASW1#show running-config
+Building configuration...
+
+Current configuration : 2697 bytes
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname HQ-ASW1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+memory-size iomem 5
+no ip routing
+no ip icmp rate-limit unreachable
+no ip cef
+!
+!
+!
+!
+no ip domain lookup
+ip auth-proxy max-nodata-conns 3
+ip admission max-nodata-conns 3
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+vtp file nvram:vlan.dat
+
+!
+!
+ip tcp synwait-time 5
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ no ip address
+ no ip route-cache
+ shutdown
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1
+ no ip address
+ no ip route-cache
+ shutdown
+ duplex auto
+ speed auto
+!
+interface FastEthernet1/0
+ description TO-HQ-DSW1-Fa1/0
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 1,10,20,30,40,50,999,1002-1005
+ switchport mode trunk
+!
+interface FastEthernet1/1
+ switchport access vlan 998
+ shutdown
+!
+interface FastEthernet1/2
+ description PC-FIN
+ switchport access vlan 20
+ spanning-tree portfast
+!
+interface FastEthernet1/3
+ description PC-OPS
+ switchport access vlan 30
+ spanning-tree portfast
+!
+interface FastEthernet1/4
+ description PC-GUEST
+ switchport access vlan 50
+ spanning-tree portfast
+!
+interface FastEthernet1/5
+ description PC_IT
+ switchport access vlan 10
+ spanning-tree portfast
+!
+interface FastEthernet1/6
+ switchport access vlan 998
+ shutdown
+ spanning-tree portfast
+!
+interface FastEthernet1/7
+ switchport access vlan 998
+ shutdown
+ spanning-tree portfast
+!
+interface FastEthernet1/8
+ switchport access vlan 998
+ shutdown
+ spanning-tree portfast
+!
+interface FastEthernet1/9
+ switchport access vlan 998
+ shutdown
+ spanning-tree portfast
+!
+interface FastEthernet1/10
+ switchport access vlan 998
+ shutdown
+ spanning-tree portfast
+!
+interface FastEthernet1/11
+ switchport access vlan 998
+ shutdown
+ spanning-tree portfast
+!
+interface FastEthernet1/12
+ switchport access vlan 998
+ shutdown
+ spanning-tree portfast
+!
+interface FastEthernet1/13
+ switchport access vlan 998
+ shutdown
+ spanning-tree portfast
+!
+interface FastEthernet1/14
+ switchport access vlan 998
+ shutdown
+ spanning-tree portfast
+!
+interface FastEthernet1/15
+ switchport access vlan 998
+ shutdown
+ spanning-tree portfast
+!
+interface Vlan1
+ no ip address
+ no ip route-cache
+ shutdown
+!
+interface Vlan10
+ description MGMT
+ ip address 10.10.1.36 255.255.255.224
+ no ip route-cache
+!
+ip default-gateway 10.10.1.33
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+no cdp log mismatch duplex
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line vty 0 4
+ login
+!
+!
+end
+
